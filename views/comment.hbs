@@ -1,0 +1,31 @@
+<h1>{{title}}</h1>
+<a href="/{{post_id}}/delete">delete</a>
+<a href="/{{post_id}}/edit_post">edit</a>
+<p> post:</p>
+<p>{{post}}</p>
+
+<form class="" action="/{{post_id}}/comment" method="post">
+ <!-- <select class="" name="name">
+   {{#each user}}
+   <option>
+    {{this.name}}
+    </option>
+   {{/each}}
+ </select>  -->
+ <ol>
+ {{#each comments}}
+ <li>
+   <a href="/{{this.id}}/commentdel">delete</a>
+   <a href="/{{this.id}}/comment_edit">edit</a>
+  {{this.comment}}
+</a>
+</li>
+ {{/each}}
+ </ol>
+
+
+ </select>
+  <input type="texfield" name="comment" value="" placeholder="add text">
+
+  <button type="submit">Add comment</button>
+</form>

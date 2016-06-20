@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+
+{{#each blog}}
+<ul>
+  <li>
+
+    {{this.name}}
+
+  <div>
+    <a href='/{{this.id}}/comment'>
+    {{this.body}}
+  </a>
+
+  </div>
+  {{this.comment}}
+</li>
+</ul>
+{{/each}}
+
+<a href= "/add"> Click to add a new post</a>
